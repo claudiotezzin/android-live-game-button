@@ -1,4 +1,4 @@
-package com.tezzin.livegamebutton
+package com.tezzin.livegamebutton.library
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -16,7 +16,7 @@ import android.view.Gravity
 import android.view.MotionEvent
 import android.widget.Button
 
-class JereButton : Button {
+class LiveGameButton: Button {
     private val defaultBackgroundColor = Color.rgb(131, 158, 46)
     private val defaultShadowColor = Color.rgb(128, 128, 128)
     private val defaultCorners = 4f
@@ -31,12 +31,12 @@ class JereButton : Button {
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.JereButton, defStyleAttr, 0)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.LiveGameButton, defStyleAttr, 0)
         if (typedArray != null) {
-            shadowHeightPressed = typedArray.getDimension(R.styleable.JereButton_shadowHeightPressed, dipToPixels(shadowHeightPressed))
-            shadowHeightNormal = typedArray.getDimension(R.styleable.JereButton_shadowHeightNormal, dipToPixels(shadowHeightNormal))
-            drawableBackground = typedArray.getDrawable(R.styleable.JereButton_drawableBackground)
-            shadowDrawableBackground = typedArray.getDrawable(R.styleable.JereButton_shadowDrawableBackground)
+            shadowHeightPressed = typedArray.getDimension(R.styleable.LiveGameButton_shadowHeightPressed, dipToPixels(shadowHeightPressed))
+            shadowHeightNormal = typedArray.getDimension(R.styleable.LiveGameButton_shadowHeightNormal, dipToPixels(shadowHeightNormal))
+            drawableBackground = typedArray.getDrawable(R.styleable.LiveGameButton_drawableBackground)
+            shadowDrawableBackground = typedArray.getDrawable(R.styleable.LiveGameButton_shadowDrawableBackground)
             typedArray.recycle()
         }
 
