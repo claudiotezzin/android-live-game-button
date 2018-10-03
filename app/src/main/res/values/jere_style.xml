@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="JereButton">
+        <attr name="shadowHeightNormal" format="dimension"/>
+        <attr name="shadowHeightPressed" format="dimension"/>
+        <attr name="drawableBackground" format="integer"/>
+        <attr name="shadowDrawableBackground" format="integer"/>
+    </declare-styleable>
+</resources>
